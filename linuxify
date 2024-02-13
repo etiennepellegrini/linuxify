@@ -39,7 +39,7 @@ linuxify_formulas=(
     "watch"
     "wget"
     "wdiff"
-    # "gdb" intel only
+    # "gdb" (intel only)
     "autoconf"
 
     # GNU programs whose BSD counterpart is installed in macOS
@@ -55,27 +55,27 @@ linuxify_formulas=(
     "gnu-which"
     "grep"
     "gzip"
-    "screen"
+    # "screen" (I use tmux)
 
     # GNU programs existing in macOS which are outdated
     "bash"
-    "emacs"
+    # "emacs" (I use vim)
     "gpatch"
     "less"
     "m4"
     "make"
-    "nano"
+    # "nano" (I use vim)
     "bison"
 
     # BSD programs existing in macOS which are outdated
-    "flex"
+    # "flex" (not necessary)
 
     # Other common/preferred programs in GNU/Linux distributions
-    "libressl"
+    # "libressl" (not necessary)
     "file-formula"
     "git"
     "openssh"
-    "perl"
+    # "perl" (not necessary)
     "python"
     "rsync"
     "unzip"
@@ -109,9 +109,9 @@ linuxify_install() {
         fi
     done
 
-    if [[ $CPU_BRAND_STRING != 'Apple' ]]; then
-        linuxify_install_gdb
-    fi
+    # if [[ $CPU_BRAND_STRING != 'Apple' ]]; then
+    #     linuxify_install_gdb
+    # fi
 
     # Offer to change shell to newly installed bash
     read -p "Do you want to change your shell to the latest bash (Y/N)? " -n 1 -r

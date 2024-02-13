@@ -1,7 +1,9 @@
 BREW_HOME=$(brew --prefix)
 
 # most programs
-export PATH="${BREW_HOME}/bin:$PATH"
+if [[ ! $PATH == *"${BREW_HOME}/bin:"* ]]; then
+	export PATH="${BREW_HOME}/bin:$PATH"
+fi
 export MANPATH="${BREW_HOME}/share/man:$MANPATH"
 export INFOPATH="${BREW_HOME}/share/info:$INFOPATH"
 
@@ -26,19 +28,19 @@ export PATH="${BREW_HOME}/opt/unzip/bin:$PATH"
 export PATH="${BREW_HOME}/opt/python/libexec/bin:$PATH"
 
 # flex
-export PATH="${BREW_HOME}/opt/flex/bin:$PATH"
-export LDFLAGS="-L${BREW_HOME}/opt/flex/lib"
-export CPPFLAGS="-I${BREW_HOME}/opt/flex/include"
+# export PATH="${BREW_HOME}/opt/flex/bin:$PATH"
+# export LDFLAGS="-L${BREW_HOME}/opt/flex/lib"
+# export CPPFLAGS="-I${BREW_HOME}/opt/flex/include"
 
 # bison
 export PATH="${BREW_HOME}/opt/bison/bin:$PATH"
 export LDFLAGS="-L${BREW_HOME}/opt/bison/lib"
 
 # libressl
-export PATH="${BREW_HOME}/opt/libressl/bin:$PATH"
-export LDFLAGS="-L${BREW_HOME}/opt/libressl/lib"
-export CPPFLAGS="-I${BREW_HOME}/opt/libressl/include"
-export PKG_CONFIG_PATH="${BREW_HOME}/opt/libressl/lib/pkgconfig"
+# export PATH="${BREW_HOME}/opt/libressl/bin:$PATH"
+# export LDFLAGS="-L${BREW_HOME}/opt/libressl/lib"
+# export CPPFLAGS="-I${BREW_HOME}/opt/libressl/include"
+# export PKG_CONFIG_PATH="${BREW_HOME}/opt/libressl/lib/pkgconfig"
 
 # ed
 export PATH="${BREW_HOME}/opt/ed/libexec/gnubin:$PATH"
