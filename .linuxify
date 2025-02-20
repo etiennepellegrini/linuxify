@@ -11,6 +11,12 @@ export INFOPATH="${BREW_HOME}/share/info:$INFOPATH"
 export PATH="${BREW_HOME}/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="${BREW_HOME}/opt/coreutils/libexec/gnuman:$MANPATH"
 
+# findutils
+export PATH="${BREW_HOME}/opt/findutils/libexec/gnubin:$PATH"
+
+# binutils
+export PATH="${BREW_HOME}/opt/binutils/bin:$PATH"
+
 # make
 export PATH="${BREW_HOME}/opt/make/libexec/gnubin:$PATH"
 export MANPATH="${BREW_HOME}/opt/make/libexec/gnuman:$MANPATH"
@@ -44,9 +50,6 @@ export LDFLAGS="-L${BREW_HOME}/opt/bison/lib"
 
 # ed
 export PATH="${BREW_HOME}/opt/ed/libexec/gnubin:$PATH"
-
-# findutils
-export PATH="${BREW_HOME}/opt/findutils/libexec/gnubin:$PATH"
 
 # gnu-indent
 export PATH="${BREW_HOME}/opt/gnu-indent/libexec/gnubin:$PATH"
